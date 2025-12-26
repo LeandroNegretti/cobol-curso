@@ -4,13 +4,22 @@
        FILE SECTION.
        WORKING-STORAGE SECTION.
        77 WS-MOSTRA                    PIC X(20) VALUE SPACES. 
-
+       77 WS-DIA-SEMANA                PIC X(20) VALUE SPACES.
        PROCEDURE DIVISION.
        MAIN-PROCEDURE.
            
-           DISPLAY "Digite algo: "
-           ACCEPT WS-MOSTRA
-           DISPLAY 'WS-MOSTRA: ' WS-MOSTRA
+      *    DISPLAY "Digite algo: "
+      *    ACCEPT WS-MOSTRA
+      *    DISPLAY 'WS-MOSTRA: ' WS-MOSTRA 
+
+      *    ACCEPT WS-MOSTRA FROM DATE YYYYMMDD
+      *    DISPLAY WS-MOSTRA
+
+            ACCEPT WS-MOSTRA FROM DAY
+            DISPLAY WS-MOSTRA
+
+            ACCEPT WS-DIA-SEMANA FROM DAY-OF-WEEK
+            DISPLAY WS-DIA-SEMANA
 
            STOP RUN.
        END PROGRAM PGEXE002.
